@@ -25,7 +25,7 @@ function memoize(fn) {
   }
 
 
-function fibRecurrive(n) {
+function fib(n) {
     if (n < 2) {
         return n;
     }
@@ -33,7 +33,7 @@ function fibRecurrive(n) {
     return fib(n - 1) + fib(n - 2);
 }
 
-const fib = memoize(fibRecurrive)
+fib = memoize(fib)
 module.exports = fib;
 
 // console.log(fib(6));
